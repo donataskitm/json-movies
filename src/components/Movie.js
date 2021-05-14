@@ -1,29 +1,19 @@
 import React  from 'react';
 
-const Movie = ({movies}) =>{
-console.log(movies);
-
+const Movie = (movies) =>{
+//console.log(movies);
 
 return (
-  
   <div className="App">
-    
-    {movies.map(({movie, index}) => (
-      <div key={index}>
-      <p> {movie.Title}</p>
-      <img src={movie.Poster}/>
-      <p> {movie.Type}</p>
-      <p> {movie.Year}</p>
+    <div key={movies.id}>
+      <p> {movies.Title}</p>
+      <img src={movies.Poster}/>
+      <p> Movie type: {movies.Type}</p>
+      <p> Year: {movies.Year}</p>
     </div>
-    ))}
-   
-    Veikia Movie
-   
+    <hr></hr>
   </div>
 );
-
 }
-
-
 
 export default Movie;
